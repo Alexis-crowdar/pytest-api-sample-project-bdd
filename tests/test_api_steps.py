@@ -1,11 +1,9 @@
 from pathlib import Path
-
 import requests
 from pytest_bdd import given, when, then, scenario, parsers
 
 from apis.APIManager import APIManager
 from apis.api_postman import get_method
-
 
 @scenario('api.feature', 'Retrieve data from API')
 def test_navigate_to_domains_page():
