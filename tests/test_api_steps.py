@@ -1,14 +1,11 @@
 from pathlib import Path
 import requests
-from pytest_bdd import given, when, then, scenario, parsers
+from pytest_bdd import given, when, then, scenario, parsers, scenarios
 
 from apis.APIManager import APIManager
 from apis.api_postman import get_method
 
-@scenario('api.feature', 'Retrieve data from API')
-def test_navigate_to_domains_page():
-    pass
-
+scenarios('api.feature')
 
 @given(parsers.parse('realizo la operacion "{method}" con el endpoint "{url}"'))
 def perform_method(method, url):
@@ -19,4 +16,3 @@ def perform_method(method, url):
 @then(parsers.parse('Obtengo el status code "{statusCode}"'))
 def validar_status_code(statusCode):
     assert APIManager.get_last_response().status_code == int(statusCode)
-    print(APIManager.get_last_response().headers)
