@@ -11,7 +11,7 @@ Feature: API testing
       | 400         |
       | 200         |
 
-    Scenario Outline: Api2
+    Scenario Outline: Api sample
     Given realizo la operacion "GET" con el endpoint "https://postman-echo.com/get"
     Then Obtengo el status code "<status_code>"
 

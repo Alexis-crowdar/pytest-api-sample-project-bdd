@@ -1,4 +1,4 @@
 
 import os
-RUN_NAME = "aut sample #12"
+RUN_NAME = "aut sample pytest"
 PROJECT_CODE = "PPC"
