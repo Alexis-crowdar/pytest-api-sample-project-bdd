@@ -48,11 +48,17 @@ This integration uses an adaptar that automatically ingests results of Scenarios
 
 ### **Settings**
 
-In order to utilize the LTM reporting library, you first need to set the environment variables with the values for **User**, **Pass, and HostKey**. 
+In order to utilize the LTM reporting library, you first need to set the environment variables with the values for **LTM-User, LTM-Pass, LTM-HostKey, LTM-RepositoryUrl and LTM-RepositoryBranch**. 
 Next, you'll need to add the git line to download the dependency in the requirements file with **"git+ssh://git@ssh....../pytest-bdd-7-adapter.git"**. 
 Lastly, set the values for the **Project code** and **Run name** variables in the config.py file.
 
+
+The implementation of the **Lippia Test Manager reporter** requires the use of hooks by implementing the **TestManagerAPIAdapter** class in the **conftest.py** file
+
+
 ![requirements](docs/img/requirements.png)
+
+
 
  - **Project code:** A unique identifier for the project.
 
