@@ -10,6 +10,7 @@ Feature: API testing
       | 200         |
       | 400         |
 
+  @example
   Scenario Outline: Api sample
     Given realizo la operacion "GET" con el endpoint "https://postman-echo.com/get"
     Then Obtengo el status code "<status_code>"
